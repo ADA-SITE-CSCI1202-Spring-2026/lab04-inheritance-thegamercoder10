@@ -34,7 +34,9 @@ public class PhdStudent extends Student {
         return super.toString() + " - Department: " + department + " - Courses: " + courseList;
     }
 
-    public boolean equals(PhdStudent p) {
+    @Override
+    public boolean equals(Object obj) {
+        PhdStudent p = (PhdStudent) obj;
         return super.equals(p) && this.department.equals(p.department) && Arrays.equals(this.courses, p.courses);
     }
 

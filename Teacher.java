@@ -33,8 +33,9 @@ public class Teacher extends Person {
         }
         return super.toString() + " - Department: " + department + " - Courses: " + courseList;
     }
-
-    public boolean equals(Teacher t) {
+    @Override
+    public boolean equals(Object obj) {
+        Teacher t = (Teacher) obj;
         return super.equals(t) && this.department.equals(t.department) && Arrays.equals(this.courses, t.courses);
     }
 

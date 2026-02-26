@@ -29,9 +29,11 @@ public class Person {
     {
         return firstName + " " + lastName;
     }
-    
-    public boolean equals(Person p)
+
+    @Override
+    public boolean equals(Object obj)
     {
+       Person p = (Person) obj;
        return this.firstName.equals(p.firstName) && this.lastName.equals(p.lastName) && this.gender.equals(p.gender);
     }
 

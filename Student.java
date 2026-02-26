@@ -20,7 +20,9 @@ public String toString() {
     return super.toString() + " - Student ID: " + studentId;
 }
 
-public boolean equals(Student s) {
+@Override
+public boolean equals(Object obj) {
+    Student s = (Student) obj;
     return super.equals(s) && this.studentId.equals(s.studentId);
 }
 
